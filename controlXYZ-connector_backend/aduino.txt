@@ -1,0 +1,25 @@
+int relay = 7;
+int val = 0;
+
+void setup() {
+ pinMode(relay,OUTPUT);
+ Serial.begin(9600);
+}
+
+void loop () {
+  if (Serial.available()) {
+    val = Serial.read();
+    if (val > '0' && val <= '9' ) {
+      Serial.println(val);
+      val = val - '0';
+      if(val==1){
+        digitalWrite(relay,HIGH);
+        delay(150);
+      }
+      else{
+        digitalWrite(relay, LOW);
+        delay(150);
+      }
+    }
+  }
+}
