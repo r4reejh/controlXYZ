@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="30dp"
+    android:background="@drawable/appback"
+    >
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="150dip"
+        android:text="ControlXYZ"
+        android:id="@+id/textview1"
+        android:textAlignment="center"
+        android:textSize="40dip"
+        android:textColor="#FFFFFF"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:padding="10dp"/>
+
+    <EditText
+        android:layout_width="500dip"
+        android:layout_height="60dip"
+        android:id="@+id/editText1"
+        android:textColor="#FFFFFF"
+        android:layout_below="@+id/textview1"
+        android:layout_alignParentStart="true"
+        android:text="192.168.43.158"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ready?"
+        android:id="@+id/button2"
+        android:onClick="change1"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/oval_shape"
+        android:layout_below="@+id/editText1"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_marginStart="157dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Server Address:"
+        android:id="@+id/textView"
+        android:textSize="20dip"
+        android:textColor="#FFFFFF"
+        android:layout_above="@+id/editText1"
+        android:layout_alignParentStart="true" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <ImageButton
+            android:id="@+id/btnSpeak"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@null"
+            android:src="@drawable/ico_mic"
+            android:layout_gravity="center_horizontal"
+            android:onClick="prompt"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/tap_on_mic"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Hello!"
+        android:textColor="#FFFFFF"
+        android:id="@+id/txtSpeechInput"
+        android:layout_below="@+id/button2"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
